@@ -16,7 +16,7 @@ class MyMiddleware(MiddlewareMixin):
             if account:
                 return account[0]
             else:
-                if request.path not in ['', 'login/']:
+                if request.path not in ['', 'login/', 'register/']:
                     return redirect('login/')
             return None
 
